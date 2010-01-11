@@ -35,10 +35,8 @@
          public function before()
          {
              parent::before();
-             $this->template->title = sprintf('%s', utf8::ucfirst(Request::instance()->controller));
-             $this->template->bind_global('messages', $this->messages);
-             
-             $this->session = Session::instance('native');
+             View::set_global('title', sprintf('%s', utf8::ucfirst(Request::instance()->controller)));
+             View::bind_global('messages', $this->messages);
          }
          
          /**
