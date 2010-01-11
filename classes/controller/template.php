@@ -56,6 +56,6 @@
              }
          }
      }
-     
+
 /* End of file template.php */
-/* Location: ./modules/template/classes/controller/template.php */ 
+/* Location: ./classes/controller/template.php */ 
