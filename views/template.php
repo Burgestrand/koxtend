@@ -4,9 +4,9 @@
         <meta http-equiv="Content-type" content="text/html;charset=utf-8">
         <title><?php echo html::chars($title) ?></title>
         
-        <meta name="author" content="*placeholder*">
-        <meta name="description" content="*placeholder*">
-        <meta name="keywords" content="*placeholder*">
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
         
         <link rel="icon" type="image/png" href="/favicon.png">
         
@@ -21,23 +21,29 @@
     <body>
         <div class="section main">
             <div class="header">
-                <h1>*placeholder*</h1>
-                <?php echo View::factory('navigation')->set('links', array('index')) ?>
+                <h1>Template</h1>
+                <?php echo View::factory('navigation')->set('links', array('template')) ?>
             </div>
             <hr>
             <div class="section body">
                 <?php 
-                    if ( ! empty($messages))
+                    foreach ($messages as $type => $msgs)
                     {
-                        echo View::factory('messages')->bind('messages', $messages);
+                        printf('<ul class="message %s">', html::chars($type));
+                        foreach ($msgs as $msg)
+                        {
+                            printf('<li>%s</li>', $msg);
+                        }
+                        print('</ul>');
                     }
-                  
+                    
                     echo $content;
-                    if ( ! empty($sidebar)): ?>
-                <div class="aside">
-                    <?php echo $sidebar; ?>
-                </div>
-                <?php endif; ?>
+                    
+                    if ( ! empty($sidebar))
+                    {
+                        printf('<div class="aside">%s</div>', $sidebar);
+                    }
+                ?>
             </div>
         </div>
         

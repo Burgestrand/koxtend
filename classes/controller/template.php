@@ -8,7 +8,7 @@
       * @author      Kim Burgestrand <kim@burgestrand.se>
       * @license     http://www.gnu.org/licenses/lgpl-3.0.txt
       */
-     class My_Controller_Template extends Controller_Template
+     class Controller_Template extends Kohana_Controller_Template
      {
          public $messages = array();
          protected $session;
@@ -35,8 +35,8 @@
          public function before()
          {
              parent::before();
-             $this->template->title = sprintf('%s | *placeholder*', utf8::ucfirst(Request::instance()->controller));
-             $this->template->bind('messages', $this->messages);
+             $this->template->title = sprintf('%s', utf8::ucfirst(Request::instance()->controller));
+             $this->template->bind_global('messages', $this->messages);
              
              $this->session = Session::instance('native');
          }
@@ -58,6 +58,6 @@
              }
          }
      }
-
-/* End of file controller.php */
-/* Location: ./application/classes/My/controller.php */ 
+     
+/* End of file template.php */
+/* Location: ./modules/template/classes/controller/template.php */ 
