@@ -35,7 +35,7 @@
          public function before()
          {
              parent::before();
-             View::set_global('title', sprintf('%s', utf8::ucfirst(Request::instance()->controller)));
+             View::set_global('title', sprintf('%s', utf8::ucfirst($this->request->controller)));
              View::bind_global('messages', $this->messages);
          }
          
