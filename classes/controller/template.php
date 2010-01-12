@@ -46,6 +46,16 @@
           */
          public function after()
          {
+             if ($this->auto_render === TRUE && ! isset($this->template->content))
+             {
+                 $view = $this->request->controller . '/' . $this->request->action;
+                 
+                 if (Kohana::find_file('views', $view))
+                 {
+                     $this->template->content = View::factory($view);
+                 }
+             }
+             
              if (Request::$is_ajax)
              {
                  $this->request->response = $this->template->content;
