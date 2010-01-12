@@ -23,6 +23,9 @@
          */
         public function write(array $messages)
         {
+            // Abort if no messages
+            if (empty($messages)) return;
+            
             // Set the monthly directory name
             $directory = $this->_directory.date('Y/m/d').DIRECTORY_SEPARATOR;
 
