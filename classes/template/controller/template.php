@@ -65,6 +65,16 @@
                  parent::after();
              }
          }
+         
+         /**
+          * Returns true if the request is internal.
+          * 
+          * @return bool
+          */
+         public function is_internal()
+         {
+             return Request::instance() !== $this->request;
+         }
      }
 
 /* End of file template.php */
