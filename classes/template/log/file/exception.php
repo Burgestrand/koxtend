@@ -2,6 +2,10 @@
     /**
      * A log writer that also creates a file on the filesystem
      * with the full Kohana backtrace.
+     * 
+     * @package     Template
+     * @author      Kim Burgestrand
+     * @license     http://www.gnu.org/licenses/lgpl-3.0.txt
      */
     class Template_Log_File_Exception extends Kohana_Log_Writer
     {

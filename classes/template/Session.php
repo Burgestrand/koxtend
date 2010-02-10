@@ -2,8 +2,9 @@
     /**
      * An extension to the Kohana session driver
      *
+     * @package     Template
      * @category    Sessions
-     * @author      Kim Burgestrand <kim@burgestrand.se>
+     * @author      Kim Burgestrand
      * @license     http://www.gnu.org/licenses/lgpl-3.0.txt
      */
     abstract class Template_Session extends Kohana_Session

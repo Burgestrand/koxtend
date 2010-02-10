@@ -4,8 +4,9 @@
       * from. It contains some basic view logic that is used everywhere,
       * including auth controls.
       * 
+      * @package     Template
       * @category    Controllers
-      * @author      Kim Burgestrand <kim@burgestrand.se>
+      * @author      Kim Burgestrand
       * @license     http://www.gnu.org/licenses/lgpl-3.0.txt
       */
      class Template_Controller_Template extends Kohana_Controller_Template
