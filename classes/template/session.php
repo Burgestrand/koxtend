@@ -3,7 +3,6 @@
      * An extension to the Kohana session driver
      *
      * @package     Template
-     * @category    Sessions
      * @author      Kim Burgestrand
      * @license     http://www.gnu.org/licenses/lgpl-3.0.txt
      */

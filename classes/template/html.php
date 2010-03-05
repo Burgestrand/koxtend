@@ -2,9 +2,9 @@
     /**
      * HTML Extension class
      *
-     * @package     Änglarna STHLM
+     * @package     Template
      * @author      Kim Burgestrand
-     * @license     http://www.gnu.org/licenses/gpl-3.0.txt
+     * @license     http://www.gnu.org/licenses/lgpl-3.0.txt
      */
     class Template_HTML extends Kohana_HTML
     {
@@ -32,6 +32,19 @@
             );
                         
             return View::factory('html/paging', array_map('intval', $data));
+        }
+        
+        /**
+         * Create a site-wide navigation using the given links
+         * 
+         * Note that the links are marked “active” by reading the current
+         * controller from the request.
+         * 
+         * @param array links
+         */
+        public static function navigation(array $links)
+        {
+            return View::factory('html/navigation', array('links' => $links));
         }
     }
     
