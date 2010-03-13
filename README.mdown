@@ -1,0 +1,7 @@
+KoXtend
+=======
+KoXtend is an extension of the Kohana Core; adding functionality that I regularly use in all my various projects.
+
+Additions
+---------
+TODO: List all additions I’ve done. A summary of sorts.
