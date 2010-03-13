@@ -2,11 +2,11 @@
     /**
      * An extension to the Kohana session driver
      *
-     * @package     Template
+     * @package     Koxtend
      * @author      Kim Burgestrand
      * @license     http://www.gnu.org/licenses/lgpl-3.0.txt
      */
-    abstract class Template_Session extends Kohana_Session
+    abstract class Koxtend_Session extends Kohana_Session
     {
         /**
          * Retrieves a value and deletes it from the session afterwards.

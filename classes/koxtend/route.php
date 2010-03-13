@@ -1,10 +1,10 @@
 <?php defined('SYSPATH') OR die('No direct access allowed.');
     /**
-     * @package     Template
+     * @package     Koxtend
      * @author      Kim Burgestrand
      * @license     http://www.gnu.org/licenses/lgpl-3.0.txt
      */
-    class Template_Route extends Kohana_Route
+    class Koxtend_Route extends Kohana_Route
     {
         /**
          * Find the first route matching the given URI
@@ -27,4 +27,4 @@
     }
     
 /* End of file route.php */
-/* Location: ./modules/template/classes/template/route.php */ 
+/* Location: ./modules/koxtend/classes/template/route.php */ 

@@ -3,11 +3,11 @@
      * A log writer that also creates a file on the filesystem
      * with the full Kohana backtrace.
      * 
-     * @package     Template
+     * @package     Koxtend
      * @author      Kim Burgestrand
      * @license     http://www.gnu.org/licenses/lgpl-3.0.txt
      */
-    class Template_Log_File_Exception extends Kohana_Log_Writer
+    class Koxtend_Log_File_Exception extends Kohana_Log_Writer
     {
         public function __construct($directory)
         {

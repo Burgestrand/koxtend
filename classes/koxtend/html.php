@@ -2,11 +2,11 @@
     /**
      * HTML Extension class
      *
-     * @package     Template
+     * @package     Koxtend
      * @author      Kim Burgestrand
      * @license     http://www.gnu.org/licenses/lgpl-3.0.txt
      */
-    class Template_HTML extends Kohana_HTML
+    class Koxtend_HTML extends Kohana_HTML
     {
         /**
          * Calculates the correct paging offsets and returns

@@ -4,12 +4,12 @@
       * from. It contains some basic view logic that is used everywhere,
       * including auth controls.
       * 
-      * @package     Template
+      * @package     Koxtend
       * @category    Controllers
       * @author      Kim Burgestrand
       * @license     http://www.gnu.org/licenses/lgpl-3.0.txt
       */
-     class Template_Controller_Template extends Kohana_Controller_Template
+     class Koxtend_Controller_Template extends Kohana_Controller_Template
      {
          public $messages = array();
          protected $session;
