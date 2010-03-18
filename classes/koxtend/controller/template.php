@@ -22,11 +22,9 @@
           */
          public function message_add($msg, $type = 'info')
          {
-             if ( ! isset($this->messages[$type]))
-             {
-                 $this->messages[$type] = array();
-             }
-             $this->messages[$type][] = $msg;
+             $session  = Session::instance();
+             $messages = $session->get('messages', array());
+             $session->set('messages', arr::merge($messages, array($type => (array) $msg)));
          }
          
          /**
