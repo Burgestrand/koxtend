@@ -21,6 +21,19 @@
             parent::delete($key);
             return $value;
         }
+        
+        /**
+         * Respect session configuration (default driver)
+         */
+        public static function instance($type = NULL, $id = NULL)
+        {
+            if (is_null($type))
+            {
+                $type = Kohana::config('session')->driver;
+            }
+            
+            return Kohana_Session::instance($type, $id);
+        }
     }
 
 /* End of file Session.php */
